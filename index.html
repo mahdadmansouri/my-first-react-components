@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .button{
+            color: #fff !important;
+            background: #333232;
+            font-size: 14px;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            margin: 40px 20px;
+        }
+        .input {
+            padding: 10px 25px 10px 15px;
+            border: solid 3px rgb(179, 174, 174);
+            border-width: 2px;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div id="comp1"></div>
+    <div id="inp1"></div>
+
+    <script type="text/babel">
+        class Input1 extends React.Component {
+            
+            render(){
+                return(
+                    <div>
+                        <input class="input" type="text" placeholder="phone number"></input>
+                    </div>
+                )
+            }
+    
+            
+        }
+        ReactDOM.render(<Input1/>, document.getElementById('inp1'));
+        </script>
+
+      <script type="text/babel">
+     class Jugul extends React.Component {
+        
+         render(){
+             return(
+                 <div>
+                     <button className="button">
+                         Mahdad   
+                     </button>
+                 </div>
+             )
+         }
+
+
+     }
+     ReactDOM.render(<Jugul/>, document.getElementById('comp1'));
+     </script> 
+
+  <!-- <button className="comp1">
+     Mahdad   
+    </button> 
+
+    <h1>hey , ninjas</h1>
+                    <p>{ Math.random()*10 } </p> -->
+</body>
+</html>
