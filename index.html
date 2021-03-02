@@ -31,11 +31,12 @@
       );
     };
 
-    const Button = ({ disabled = false, primary, secondary }) => {
+    const Button = ({ disabled = false, primary, secondary, outline }) => {
       let className = [
         'btn',
         primary?'btn-primary':'',
-        secondary?'btn-secondary':''
+        secondary?'btn-secondary':'',
+        outline?'btn-outline-primary':'',
       ].join(' ');
 
 
@@ -54,6 +55,7 @@
           <Button primary />
           <Button secondary />
           <Button disabled />
+          <Button outline />
           <Text>hi khoobi?</Text>
         </div>
       );
