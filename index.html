@@ -26,22 +26,30 @@
       return (
         <div className="mb-3">
           <label className="form-label">{label}</label>
-          <input type="email" className ="form-control" placeholder={placeholder} disabled={disabled} />
+          <input type="email" className="form-control" placeholder={placeholder} disabled={disabled} />
         </div>
       );
     };
 
-    const Button = ({ disabled = false, primary, secondary, outline, size }) => {
+    const Button = ({ disabled = false, primary, secondary, outline, large }) => {
       let className = [
         'btn',
-        primary?'btn-primary':'',
-        secondary?'btn-secondary':'',
-        outline?'btn-outline-primary':'',
-        size?'btn-lg':'',
+        primary ? 'btn-primary' : '',
+        secondary ? 'btn-secondary' : '',
+        outline ? 'btn-outline-primary' : '',
+
       ].join(' ');
 
+      let size = [
+        'btn', 'btn-primary',
+       large ? 'btn-lg' : '',
+        // lg ? 'btn-lg' : '',
+        // sm ? 'btn-sm' : '',  
+      ].join(' ');
+      
 
-      return <button className={className} disabled={disabled}>Mahdad</button>;
+
+      return <button className={className} size={size} disabled={disabled}>Mahdad</button>;
     };
 
     const Text = ({ children }) => {
@@ -57,7 +65,7 @@
           <Button secondary />
           <Button disabled />
           <Button outline />
-          <Button size />
+          <Button large />
           <Text>hi khoobi?</Text>
         </div>
       );
