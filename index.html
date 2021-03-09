@@ -10,6 +10,7 @@
   <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+  <script type="text/babel" src="Button.js"></script>
   <style>
     html,
     body {
@@ -21,57 +22,7 @@
 
 <body>
   <div id="root"></div>
-  <script type="text/babel">
-    const Input = ({ placeholder, label, disabled = false }) => {
-      return (
-        <div className="mb-3">
-          <label className="form-label">{label}</label>
-          <input type="email" className="form-control" placeholder={placeholder} disabled={disabled} />
-        </div>
-      );
-    };
-
-    const Button = ({ disabled = false, primary, secondary, outline, large }) => {
-      let className = [
-        'btn',
-        primary ? 'btn-primary' : '',
-        secondary ? 'btn-secondary' : '',
-        outline ? 'btn-outline-primary' : '',
-
-      ].join(' ');
-
-      let size = [
-        'btn', 'btn-primary',
-       large ? 'btn-lg' : '',
-        // lg ? 'btn-lg' : '',
-        // sm ? 'btn-sm' : '',  
-      ].join(' ');
-      
-
-
-      return <button className={className} size={size} disabled={disabled}>Mahdad</button>;
-    };
-
-    const Text = ({ children }) => {
-      return <p> {children} </p>;
-    }
-
-    const App = () => {
-      return (
-        <div>
-          <Input placeholder="phone number" />
-          <Input placeholder="Mobile number" disabled />
-          <Button primary />
-          <Button secondary />
-          <Button disabled />
-          <Button outline />
-          <Button large />
-          <Text>hi khoobi?</Text>
-        </div>
-      );
-    };
-    ReactDOM.render(<App />, document.getElementById("root"));
-  </script>
+  
 </body>
 
 </html>
